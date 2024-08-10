@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>教程 on Sunosense&#39;s Blog</title>
+    <link>https://sunosense.github.io/categories/%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 教程 on Sunosense&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 05 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://sunosense.github.io/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 学习笔记</title>
+      <link>https://sunosense.github.io/post/it/hello-hugo/</link>
+      <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://sunosense.github.io/post/it/hello-hugo/</guid>
+      <description>这是使用Hugo搭建博客的一些经验总结。编写此系列文章既是为了记录搭建Hugo思路，方便笔者以后参考再次搭建。 Hugo是什么 Hugo本质上是</description>
+    </item>
+    
+  </channel>
+</rss>

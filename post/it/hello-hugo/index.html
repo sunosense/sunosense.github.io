@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>
-          Sunosense&#39;s Blog
+          Hugo 学习笔记 - Sunosense&#39;s Blog
         </title>
     
 
@@ -29,6 +29,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Sunosense" />
+  <meta name="description" content="这是使用Hugo搭建博客的一些经验总结。编写此系列文章既是为了记录搭建Hugo思路，方便笔者以后参考再次搭建。 Hugo是什么 Hugo本质上是" />
+
 
 
 
@@ -38,7 +40,7 @@
 <meta name="generator" content="Hugo 0.111.3" />
 
 
-<link rel="canonical" href="https://sunosense.github.io/" />
+<link rel="canonical" href="https://sunosense.github.io/post/it/hello-hugo/" />
 
 
 
@@ -64,14 +66,19 @@
 
 
 
-<meta property="og:title" content="Sunosense&#39;s Blog" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://sunosense.github.io/" />
-<meta itemprop="name" content="Sunosense&#39;s Blog">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sunosense&#39;s Blog"/>
-<meta name="twitter:description" content=""/>
+<meta property="og:title" content="Hugo 学习笔记" />
+<meta property="og:description" content="这是使用Hugo搭建博客的一些经验总结。编写此系列文章既是为了记录搭建Hugo思路，方便笔者以后参考再次搭建。 Hugo是什么 Hugo本质上是" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sunosense.github.io/post/it/hello-hugo/" /><meta property="article:section" content="post" />
+
+<meta property="article:modified_time" content="2024-08-05T00:00:00+00:00" />
+<meta itemprop="name" content="Hugo 学习笔记">
+<meta itemprop="description" content="这是使用Hugo搭建博客的一些经验总结。编写此系列文章既是为了记录搭建Hugo思路，方便笔者以后参考再次搭建。 Hugo是什么 Hugo本质上是">
+<meta itemprop="dateModified" content="2024-08-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="669">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo 学习笔记"/>
+<meta name="twitter:description" content="这是使用Hugo搭建博客的一些经验总结。编写此系列文章既是为了记录搭建Hugo思路，方便笔者以后参考再次搭建。 Hugo是什么 Hugo本质上是"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -229,7 +236,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -301,23 +308,15 @@
 
     <div id="mobile-panel">
       <main id="main" class="main bg-llight wallpaper">
+        <div class="content-wrapper">
+    <div id="content" class="content">
+      <article class="post">
         
-<section id="posts" class="posts">
-  
-  
-    
-  
-  
-  
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/it/hello-hugo/">Hugo 学习笔记</a>
-    </h1>
-    
+        <header class="post-header">
+          <h1 class="post-title">Hugo 学习笔记</h1>
+          
 
-    <div class="post-meta">
+          <div class="post-meta">
   <div class="post-meta-author">
     by
       <a href="/about">
@@ -356,50 +355,135 @@
   </div>
 </div>
 
-  </header>
+        </header>
+
+        
+        <div class="post-content">
+          <blockquote>
+<p>这是使用Hugo搭建博客的一些经验总结。编写此系列文章既是为了记录搭建Hugo思路，方便笔者以后参考再次搭建。</p>
+</blockquote>
+<h3 id="hugo是什么">Hugo是什么</h3>
+<ul>
+<li>Hugo本质上是个本地运行的工具，可以理解为一个文件转换器，把你写的文章（markdown文件）转换成网页，它和服务器端部署没有关系，不提供web服务</li>
+</ul>
+<h3 id="hugo学什么">Hugo学什么</h3>
+<ul>
+<li>学习基本命令：学习如何用Hugo的基础命令生成网站，如何将文章生成可发布的形式。</li>
+<li>学习文档结构：文档主要是md文件，但在md文件的开头加入了front matter,使用该参数控制文档的组织结构，使文档适应任何主题</li>
+<li>学习主题配置：主题配置主要是对config.toml文件进行配置，根据注释进行修改，让主题变成我们的网站。</li>
+<li>学习文档部署：将生成的可发布的文章，上传到web服务器上，供自己随时查阅</li>
+</ul>
+<h3 id="hugo搭建博客思路">Hugo搭建博客思路</h3>
+<ol>
+<li>本地部署Hugo编辑环境</li>
+<li>下载合适的主题，并进行相关配置</li>
+<li>本地编写需要发布的文章</li>
+<li>使用Hugo将编写的文章配合主题生成静态网页</li>
+<li>将生成的静态网页上传到web服务器上</li>
+<li>继续写文章，生成新网页，继续部署到服务器上</li>
+</ol>
+<h3 id="hugo的优缺点">Hugo的优缺点</h3>
+<ul>
+<li>优点：对服务器性能要求低，文件备份简单</li>
+<li>缺点：不是动态网站，不能在服务器上直接写文章</li>
+</ul>
+<h3 id="hugo主题选择">Hugo主题选择</h3>
+<ul>
+<li>选择的依据
+<ul>
+<li>目的：笔者要开发一个博客网站，目的是将平时读书学习的所思所得记录下来，发布到网站上方便参考复习</li>
+<li>分类：博客必须要有文章分类的功能，将不同学科的文章分类展示</li>
+<li>简洁：博客界面要尽量简洁，博客主要供笔者使用，不需要炫彩的界面</li>
+<li>美观：博客界面要对阅读友好，比如护眼、背景好看等</li>
+</ul>
+</li>
+<li>主题推荐
+<ul>
+<li><a href="https://github.com/xianmin/hugo-theme-jane">jane</a></li>
+<li><a href="https://github.com/zhaohuabing/hugo-theme-cleanwhite?tab=readme-ov-file">cleanwhite</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="推荐工具">推荐工具</h3>
+<ul>
+<li>文章编辑：vscode</li>
+<li>文章管理：git</li>
+</ul>
+
+        </div>
+
+        
+        
+
+
+
+        
+        
+
+
+        <footer class="post-footer">
+          
+
+
+          
+          <nav class="post-nav">
+            
+            
+          </nav>
+        </footer>
+      </article>
+
+      
+      
+
+
+      
+      
+
   
-  <div class="post-content">
+
+  
+  
+
+  
+  
+
+  
+
+  
+
     
-      <div class="post-summary">
-        这是使用Hugo搭建博客的一些经验总结。编写此系列文章既是为了记录搭建Hugo思路，方便笔者以后参考再次搭建。 Hugo是什么 Hugo本质上是
-      </div>
-      <div class="read-more">
-        <a href="/post/it/hello-hugo/" class="read-more-link"
-          >阅读全文</a
-        >
-      </div>
+
+  
+
+  
+
+
+    </div>
+
     
+    <nav class="toc" id="toc">
+    <div class="toc-title">文章目录</div>
+    <div class="toc-content custom-scrollbar">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#hugo是什么">Hugo是什么</a></li>
+        <li><a href="#hugo学什么">Hugo学什么</a></li>
+        <li><a href="#hugo搭建博客思路">Hugo搭建博客思路</a></li>
+        <li><a href="#hugo的优缺点">Hugo的优缺点</a></li>
+        <li><a href="#hugo主题选择">Hugo主题选择</a></li>
+        <li><a href="#推荐工具">推荐工具</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </nav>
+
+
   </div>
-</article>
-
-  
-</section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-
-
-
-
 
       </main>
 
